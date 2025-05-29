@@ -1,0 +1,133 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #3E3951;
+    padding: 40px;
+    color: #333;
+}
+
+img.banner, img.footer {
+    width: 100%; /* Ocupa el 90% del ancho del contenedor */
+    height: 100px; /* Altura fija de 100px */
+    border-radius: 25px;
+    margin-bottom: 30px;
+    box-shadow: inset 20px 20px 60px #353045,
+                inset -20px -20px 60px #47425d;
+    display: block; /* Necesario para que los márgenes automáticos centren la imagen */
+    margin-left: auto; /* Centra la imagen horizontalmente */
+    margin-right: auto; /* Centra la imagen horizontalmente */
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse, puede recortar.
+                          Alternativa: object-fit: contain; (para ver toda la imagen, puede dejar espacios) */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2D2A37;
+}
+
+#form-container, table {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #8f87b1, #797195);
+    box-shadow:  20px 20px 60px #726b8c,
+                -20px -20px 60px #9a91be;
+    padding: 20px;
+
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2D2A37;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background: #645E7B;
+    box-shadow: inset 9px 9px 28px #3f3b4d,
+                inset -9px -9px 28px #8981a9;
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
+button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 15px;
+    background: #3B364E;
+    color: #1F1B33;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: inset -16px -16px 100px #4c485d,
+                inset 16px 16px 100px #beb4e9;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #3B364E#d0e8ff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #B6ABE1;
+    color: #2D2A37;
+}
+
+#message {
+    margin-top: 20px;
+    color: #B6ABE1;
+    text-align: center;
+}
+
+
+/* PARA EL BOTONCITO DEL REPOSITORIO DE GITHUB */
+/* From Uiverse.io by CYBWEBALI */ 
+.btn {
+  position: fixed; /* Posiciona el botón con respecto al viewport */
+  top: 20px; /* Distancia desde la parte superior, ajústalo según necesites */
+  left: 50%; /* Lo mueve al 50% del ancho del viewport */
+  transform: translateX(-50%); /* Lo centra exactamente compensando su propio ancho */
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  display: grid;
+  place-items: center;
+  background: #e3edf7;
+  padding: 12px;
+  border-radius: 45px;
+  box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+	      -6px -6px 10px -1px rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0);
+  cursor: pointer;
+  transition: transform 1s;
+}
+
+.btn:hover {
+  box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+	      inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+	      -0.5px -0.5px 0px rgba(255,255,255,1),
+	      0.5px 0.5px 0px rgba(0,0,0,0.15),
+	      0px 12px 10px -10px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.1); /* Mantiene el centrado horizontal y añade el desplazamiento vertical en hover */
+  transform: translateX(-50%) translateY(0.5em);
+}
+
+.btn svg {
+  transition: transform 0.5s;
+}
+
+.btn:hover svg {
+  transform: scale(0.9);
+  fill: #333333;
+}

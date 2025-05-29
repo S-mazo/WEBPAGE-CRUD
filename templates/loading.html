@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+        @font-face {
+            font-family: "Bestime"; /* Nombre que usarás para referenciar la fuente */
+            src: url("{{ url_for('static', filename='fonts/Bestime.ttf') }}"); /* Ruta y formato de la fuente */
+        }
+        body {
+            background-color: #2c2c2c;
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("{{ url_for('static', filename='img/foto1.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(8px); /* Ajusta el valor para más o menos desenfoque */
+            opacity: 0.6;      /* Ajusta la opacidad (0.0 transparente a 1.0 opaco) */
+            z-index: -1;       /* Lo coloca detrás del contenido del body */
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='loading.css') }}">
+    <title>Cargando...</title>
+</head>
+<body>
+    <h1>Cargando...</h1>
+<!-- From Uiverse.io by Praashoo7 --> 
+<div class="main">
+  <div class="up">
+    <div class="loaders">
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+      <div class="loader"></div>
+    </div>
+    <div class="loadersB">
+      <div class="loaderA">
+        <div class="ball0"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball1"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball2"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball3"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball4"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball5"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball6"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball7"></div>
+      </div>
+      <div class="loaderA">
+        <div class="ball8"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+ <script>
+        window.onload = function() {
+            fetch('/get_github_link')
+                .then(response => response.json())
+                .then(data => {
+                    const githubLink = data.github_link;
+                    if (githubLink) {
+                        setTimeout(function() {
+                            window.location.href = githubLink;
+                        }, 3000); // 3000 milisegundos = 3 segundos de espera
+                    } else {
+                        console.error("No se encontró el enlace de GitHub. Redirigiendo a la página principal.");
+                        setTimeout(function() {
+                            window.location.href = '/'; 
+                        }, 1000); // Redirige más rápido si hay un error
+                    }
+                })
+                .catch(error => {
+                    console.error("Error al obtener el enlace de GitHub:", error);
+                    setTimeout(function() {
+                        window.location.href = '/'; 
+                    }, 1000); // Redirige en caso de error
+                });
+        };
+    </script>
+</html>

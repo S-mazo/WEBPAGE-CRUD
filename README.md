@@ -111,17 +111,15 @@ python backend.py
 
 Esto iniciará el servidor en modo desarrollo. Luego, en el navegador se accede a [http://localhost:5000](http://localhost:5000) para interactuar con la interfaz web del CRUD.
 
-
----
-## Creadores
- - **Samuel Mazo Echeverri** <br> smazo@unilasallista.edu.co <br> [![Perfil Smazo](https://img.shields.io/badge/Github-S--mazo-blue)](https://github.com/S-mazo)
- - **Santiago Silva Carvajal** <br> ssilva7@unilasallista.edu.co <br> [![Perfil ssilva7](https://img.shields.io/badge/Github-rokuritas-green)](https://github.com/rokuritas)
-
 ---
 ## Captura del proyecto
 ![Captura del proyecto](static/img/foto3.png)
 Enlace del Proyecto: [https://github.com/S-mazo/WEBPAGE-CRUD](https://github.com/S-mazo/WEBPAGE-CRUD)
 
+---
+## Creadores
+ - **Samuel Mazo Echeverri** <br> smazo@unilasallista.edu.co <br> [![Perfil Smazo](https://img.shields.io/badge/Github-S--mazo-blue)](https://github.com/S-mazo)
+ - **Santiago Silva Carvajal** <br> ssilva7@unilasallista.edu.co <br> [![Perfil ssilva7](https://img.shields.io/badge/Github-rokuritas-green)](https://github.com/rokuritas)
 ---
 
 ## Agradecimientos
